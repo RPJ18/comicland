@@ -1,0 +1,1441 @@
+@import url("font-awesome/css/fontawesome-all.css");
+@import url("slick.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+	--gray-light: rgb(248, 249, 250);
+	--gray-dark: rgb(157, 157, 157);
+	--dark-black: rgb(54, 63, 70);
+	--white: rgb(255, 255, 255);
+	--green-sea: #2c3e50;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .5);
+  transition: all linear .15s;
+}
+
+a:hover {
+	text-decoration: none;
+	color: rgb(74, 75, 75);
+}
+
+.short-navbar {
+	padding: .3rem 1rem !important;
+}
+
+.custom-navbar {
+	background: rgba(255, 255, 255, .9);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+	padding: 1rem;
+	transition: all ease .65s;
+}
+
+.custom-navbar .navbar-brand {
+	font: 800 1.5rem/1.6 Segoe UI, sans-serif;
+	color: var(--green-sea);
+}
+
+.custom-navbar .navbar-nav .nav-item {
+	padding: 0 .5rem;
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link {
+	text-transform: uppercase;
+	/*font-family: "Nunito Sans", sans-serif;*/
+	font: 500 .85rem Segoe UI;
+}
+
+.custom-navbar .custom-navbar-search-input {
+	background: transparent;
+	border: none;
+	/*border-bottom: 1px solid var(--dark-black);*/
+	border-radius: 0;
+	text-align: end;
+	text-transform: uppercase;
+}
+
+.custom-navbar .custom-navbar-search-input:active, 
+.custom-navbar .custom-navbar-search-input:focus {
+	box-shadow: none;
+}
+
+.custom-navbar .custom-navbar-search-btn {
+	border: none;
+	background: transparent;
+}
+
+.custom-navbar .dropdown-menu {
+	padding: 0;
+	background: rgba(54, 63, 70, .9);
+}
+
+.custom-navbar .dropdown-menu .dropdown-item {
+	padding: .65rem 1.5rem;
+	color: var(--gray-dark);
+	transition: all linear .15s;
+	text-transform: uppercase;
+	font-size: .85rem;
+}
+
+.custom-navbar .dropdown-menu .dropdown-item.active {
+	color: var(--white);
+	background-color: var(--dark-black);
+}
+
+.custom-navbar .dropdown-menu .dropdown-item:hover,
+.custom-navbar .dropdown-menu .dropdown-item:focus {
+	color: var(--white);
+	background-color: var(--dark-black);
+}
+
+.custom-navbar .dropdown-menu .dropdown-divider {
+	margin: 0;
+}
+
+/* home page 
+====================================
+====================================
+*/
+
+.banner {
+	background: var(--gray-light) url('../img/marvel-comics-1.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 80vh;
+}
+
+.main-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/*grid-template-rows: 553px;*/
+	grid-gap: 2rem;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.main-grid .card {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	border: none;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	height: 100%;
+}
+
+.main-grid .card:hover {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.main-grid .card .card-image {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	transition: all linear .15s;
+}
+
+.main-grid .card .card-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.main-grid .card .card-image .layer-0,
+.main-grid .card .card-image .layer-1,
+.main-grid .card .card-image .layer-2,
+.main-grid .card .card-image .layer-3,
+.main-grid .card .card-image .layer-4,
+.main-grid .card .card-image .layer-5,
+.main-grid .card .card-image .layer-6,
+.main-grid .card .card-image .layer-7,
+.main-grid .card .card-image .layer-8 {
+	position: absolute;
+	/*top: 0;*/
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 0%;
+	background: rgba(255,255,255, .5);
+	z-index: 1003;
+	transition: all linear .25s;
+}
+
+.show-card-layer {
+	height: 100% !important;
+}
+
+.main-grid .card .card-header {
+	border-bottom: none;
+	font: 300 1.15rem Agency FB Regular;
+	text-transform: uppercase;
+	color: var(--dark);
+}
+
+.main-grid .card .card-body {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.main-grid .card .card-body p {
+	margin-bottom: 0;
+	color: #7f8c8d;
+	font: 400 .74rem/1.4 Segoe UI;
+	letter-spacing: 1px;
+}
+
+/* DC page 
+====================================
+====================================
+*/
+
+.banner-dc {
+	background: var(--gray-light) url('../img/dc-comics.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-dc .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* MARVEL page 
+====================================
+====================================
+*/
+
+.banner-marvel {
+	background: var(--gray-light) url('../img/marvel-comics-2.gif') no-repeat center / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-marvel .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* IMAGE page 
+====================================
+====================================
+*/
+
+.banner-image {
+	background: var(--gray-light) url('../img/image-comics-2.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-image .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* DARK HORSE page 
+====================================
+====================================
+*/
+
+.banner-dark-horse {
+	background: var(--gray-light) url('../img/dark-horse-comics-1.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-dark-horse .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* IDW page 
+====================================
+====================================
+*/
+
+.banner-idw {
+	background: var(--gray-light) url('../img/idw-comics-1.jpg') no-repeat 50% 35% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-idw .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* DYNAMITE page 
+====================================
+====================================
+*/
+
+.banner-dynamite {
+	background: var(--gray-light) url('../img/dynamite-comics-2.png') no-repeat top / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-dynamite .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* ICON page 
+====================================
+====================================
+*/
+
+.banner-icon {
+	background: var(--gray-light) url('../img/icon-comics-1.jpg') no-repeat 50% 15% / cover;
+	width: 100vw;
+	height: 80vh;
+}
+
+.banner-icon .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* VERTIGO page 
+====================================
+====================================
+*/
+
+.banner-vertigo {
+	background: var(--gray-light) url('../img/vertigo-comics-1.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 80vh;
+}
+
+.banner-vertigo .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+/* SUPERNATURAL page 
+====================================
+====================================
+*/
+
+.banner-supernatural {
+	background: var(--gray-light) url('../img/supernatural-1.png') no-repeat center / cover;
+	width: 100vw;
+	height: 80vh;
+}
+
+.banner-supernatural .layer {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+/* BREAKING BAD page 
+====================================
+====================================
+*/
+
+.banner-breaking-bad {
+	background: var(--gray-light) url('../img/breaking-bad-4.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 80vh;
+}
+
+.banner-breaking-bad .layer {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+/* MAIN SLIDER styles 
+====================================
+====================================
+*/
+
+.slider-section {
+	width: 89%;
+	padding: 3rem 0 5rem;
+	margin: 0 auto;
+}
+
+.main-slider {
+	position: relative;
+}
+
+.main-slider .slick-slide {
+	outline: none;
+	transition: all ease .3s;
+}
+
+.main-slider .slick-dots {
+  display: block;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 3.6rem 0 0 0;
+  text-align: center;
+  position: absolute;
+  top: 95%;
+  left: 0;
+}
+
+.main-slider .slick-dots li {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin: 0;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.main-slider .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  border-radius: 50%;
+  background: black;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+.main-slider .slick-dots li button:hover,
+.main-slider .slick-dots li button:focus {
+  outline: none;
+}
+
+.main-slider .slick-dots li.slick-active button,
+.main-slider .slick-dots li:hover button {
+  background: transparent;
+  background-color: transparent;
+  border: 3px solid #000000;
+}
+
+.main-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -3.5rem;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 11px;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+.main-slider .slick-arrow:hover {
+  transform: scale(1);
+}
+
+.main-slider .slick-prev {
+  left: -120px;
+  background-image: url(../img/icons/icon-arrow-left.svg);
+}
+
+.main-slider .slick-next {
+  right: -120px;
+  background-image: url(../img/icons/icon-arrow-right.svg);
+}
+
+.main__slide {
+	position: relative;
+  text-align: center;
+  height: 600px;
+  transition: all 0.5s ease-in-out;
+}
+
+.main__slide .slide__content {
+	position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.main__slide .slide__content::before {
+	display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  opacity: .3;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.main__slide .slide__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	/*background-image: url('../img/bats-01.jpg');
+*/}
+
+.slick-slide:not(.slick-active) {
+  padding: 60px 0;
+}
+
+/* Editorials Pages General styles 
+====================================
+====================================
+*/
+
+.links-section {
+	padding: 5% 0;
+}
+
+.links-section .section-title {
+	margin-bottom: 2rem;
+}
+
+.links-section .section-title h4 {
+	font: 700 3rem Agency FB;
+}
+
+.links {
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.links li {
+	margin: .5rem 0;
+}
+
+/* Download Pages General styles 
+====================================
+====================================
+*/
+
+.description {
+	padding: 5% 0 1%;
+}
+
+.description .section-title {
+	margin-bottom: 1.2rem;
+}
+
+.description .section-title h4 {
+	font: 700 2rem Agency FB;
+}
+
+.description p {
+	font: 400 .95rem Segoe UI;
+	line-height: 1.6;
+}
+
+.info .section-title h5 {
+	font: 400 1.5rem Agency FB;
+}
+
+.info {
+	margin-bottom: 1rem;
+}
+
+.info ul {
+	list-style: none;
+}
+
+.info ul li {
+	font: 400 .93rem Segoe UI;
+	padding: .2rem 0;
+}
+
+.info ul li span {
+	font-weight: 600;
+}
+
+.captures {
+	margin-bottom: 2rem;
+}
+
+.captures img {
+	width: 250px;
+	height: 250px;
+	margin-right: 1.5rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.download-links {
+	margin-bottom: 3.5rem;
+}
+
+.download-links .section-title h5 {
+	font: 400 1.5rem Agency FB;
+	margin-bottom: 1rem;
+}
+
+
+
+/* Download Pages Specific styles 
+====================================
+====================================
+*/
+
+.banner-red-robin {
+	background: var(--gray-light) url('../img/comics-covers/redrobin/red-robin-1.jpg') no-repeat center / cover;
+	width: 100vw;
+	height: 80vh;
+}
+
+.banner-red-robin .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-batman-new-52 {
+	background: var(--gray-light) url('../img/comics-covers/batmannew52/batman.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-batman-new-52 .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-red-hood-lost-days {
+	background: var(--gray-light) url('../img/comics-covers/redhoodlostdays/rh-tld-2.jpg') no-repeat 50% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-red-hood-lost-days .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-green-arrow-year-one {
+	background: var(--gray-light) url('../img/comics-covers/green-arrow-year-one/ga.00.jpg') no-repeat 50% 15% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-green-arrow-year-one .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-cable-and-deadpool {
+	background: var(--gray-light) url('../img/comics-covers/cable-and-deadpool/cable-y-deadpool-3.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-cable-and-deadpool .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-battle-for-the-cowl {
+	background: var(--gray-light) url('../img/comics-covers/battle-for-the-cowl/BatBattle1-01.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-battle-for-the-cowl .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-green-arrow-vol-3 {
+	background: var(--gray-light) url('../img/comics-covers/green-arrow-vol-3/00.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-green-arrow-vol-3 .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-punisher-vol-9 {
+	background: var(--gray-light) url('../img/comics-covers/punisher-vol-9/ThePunisher(2014-)001-000.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-punisher-vol-9 .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-civil-war {
+	background: var(--gray-light) url('../img/comics-covers/civil-war/004.jpg') no-repeat 50% 0% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-civil-war .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-nightwing-and-the-huntress {
+	background: var(--gray-light) url('../img/comics-covers/nightwing-and-the-huntress/001.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-nightwing-and-the-huntress .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-red-hood-under-the-red-hood {
+	background: var(--gray-light) url('../img/comics-covers/red-hood-under-the-red-hood/Batman-Annual-025-page-01.jpg') no-repeat 50% 45% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-red-hood-under-the-red-hood .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-el-cazador-acecha {
+	background: var(--gray-light) url('../img/comics-covers/el-cazador-acecha/Flecha-Verde-CA-1-00.jpg') no-repeat 100% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-el-cazador-acecha .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-green-arrow-seeing-red {
+	background: var(--gray-light) url('../img/comics-covers/green-arrow-seeing-red/001.jpg') no-repeat 100% 37% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-green-arrow-seeing-red .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-grayson {
+	background: var(--gray-light) url('../img/comics-covers/grayson/002.jpg') no-repeat 100% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-grayson .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-road-to-flashpoint {
+	background: var(--gray-light) url('../img/comics-covers/road-to-flashpoint/002.jpg') no-repeat 100% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-road-to-flashpoint .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-flashpoint {
+	background: var(--gray-light) url('../img/comics-covers/flashpoint/001.jpg') no-repeat 100% 55% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-flashpoint .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-flash-saga-rebirth {
+	background: var(--gray-light) url('../img/comics-covers/flash-saga-rebirth/the_flash_rebirth_1_1024x768.jpg') no-repeat 100% 55% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-flash-saga-rebirth .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-watchmen {
+	background: var(--gray-light) url('../img/comics-covers/watchmen/001.jpg') no-repeat 100% 80% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-watchmen .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-arrow-comic-serie-1 {
+	background: var(--gray-light) url('../img/comics-covers/arrow-comic-serie-1/004.jpg') no-repeat 100% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-arrow-comic-serie-1 .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-arrow-comic-serie-2-5 {
+	background: var(--gray-light) url('../img/comics-covers/arrow-comic-serie-2.5/001.jpg') no-repeat 50% 0% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-arrow-comic-serie-2-5 .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-the-flash-comic-serie {
+	background: var(--gray-light) url('../img/comics-covers/the-flash-comic-serie/001.jpg') no-repeat 50% 10% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-the-flash-comic-serie .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-captain-america-and-punisher-blood-and-glory {
+	background: var(--gray-light) url('../img/comics-covers/captain-america-and-punisher-blood-and-glory/003.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-captain-america-and-punisher-blood-and-glory .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-captain-america-the-winter-soldier-prelude {
+	background: var(--gray-light) url('../img/comics-covers/captain-america-the-winter-soldier-prelude/003.jpg') no-repeat 50% 15% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-captain-america-the-winter-soldier-prelude .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-daredevil-vs-punisher-means-and-ends {
+	background: var(--gray-light) url('../img/comics-covers/daredevil-vs-punisher-means-and-ends/003.jpg') no-repeat 50% 10% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-daredevil-vs-punisher-means-and-ends .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-golpe-de-la-viuda-negra {
+	background: var(--gray-light) url('../img/comics-covers/golpe-de-la-viuda-negra/003.JPG') no-repeat 50% 10% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-golpe-de-la-viuda-negra .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-fallen-son-the-death-of-captain-america {
+	background: var(--gray-light) url('../img/comics-covers/fallen-son-the-death-of-captain-america/003.jpg') no-repeat 50% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-fallen-son-the-death-of-captain-america .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-iron-fist-the-living-weapon {
+	background: var(--gray-light) url('../img/comics-covers/iron-fist-the-living-weapon/001.jpg') no-repeat 50% 7% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-iron-fist-the-living-weapon .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-iron-man-extremis {
+	background: var(--gray-light) url('../img/comics-covers/iron-man-extremis/001.jpg') no-repeat 50% 45% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-iron-man-extremis .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-planet-hulk {
+	background: var(--gray-light) url('../img/comics-covers/planet-hulk/001.jpg') no-repeat 50% 25% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-planet-hulk .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-old-man-logan {
+	background: var(--gray-light) url('../img/comics-covers/old-man-logan/001.jpg') no-repeat 50% 25% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-old-man-logan .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-the-death-of-wolverine {
+	background: var(--gray-light) url('../img/comics-covers/the-death-of-wolverine/001.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-the-death-of-wolverine .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-old-man-logan-secret-wars {
+	background: var(--gray-light) url('../img/comics-covers/old-man-logan-secret-wars/001.jpg') no-repeat 50% 55% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-old-man-logan-secret-wars .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-world-war-hulk {
+	background: var(--gray-light) url('../img/comics-covers/world-war-hulk/001.jpg') no-repeat 50% 37% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-world-war-hulk .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-daredevil-the-man-without-fear {
+	background: var(--gray-light) url('../img/comics-covers/daredevil-the-man-without-fear/001.jpg') no-repeat 50% 80% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-daredevil-the-man-without-fear .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-daredevil-born-again {
+	background: var(--gray-light) url('../img/comics-covers/daredevil-born-again/001.jpg') no-repeat 50% 80% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-daredevil-born-again .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-x-men-divided-we-stand {
+	background: var(--gray-light) url('../img/comics-covers/x-men-divided-we-stand/001.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-x-men-divided-we-stand .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-x-men-messiah-complex {
+	background: var(--gray-light) url('../img/comics-covers/x-men-messiah-complex/001.jpg') no-repeat 50% 35% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-x-men-messiah-complex .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-the-walking-dead {
+	background: var(--gray-light) url('../img/image-comics-1.jpg') no-repeat 50% 35% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-the-walking-dead .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-here-comes-negan {
+	background: var(--gray-light) url('../img/comics-covers/here-comes-negan-001.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-here-comes-negan .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-michonne-special {
+	background: var(--gray-light) url('../img/comics-covers/michonne-special-001.jpg') no-repeat 50% 20% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-michonne-special .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-survivors-guide {
+	background: var(--gray-light) url('../img/comics-covers/survivors-guide-001.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-survivors-guide .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-tyresse-special {
+	background: var(--gray-light) url('../img/comics-covers/tyresse-special-001.jpg') no-repeat 50% 20% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-tyresse-special .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-avatar-humo-y-sombra {
+	background: var(--gray-light) url('../img/comics-covers/avatar/avatar-humo-y-sombra/avatar-humo-y-sombra-001.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-avatar-humo-y-sombra .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-avatar-la-busqueda {
+	background: var(--gray-light) url('../img/comics-covers/avatar/avatar-la-busqueda/avatar-la-busqueda-001.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-avatar-la-busqueda .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-avatar-la-promesa {
+	background: var(--gray-light) url('../img/comics-covers/avatar/avatar-la-promesa/avatar-la-promesa-002.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-avatar-la-promesa .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-avatar-north-and-south {
+	background: var(--gray-light) url('../img/comics-covers/avatar/avatar-north-and-south/Avatar-The-Last-Airbender-North-and-South-001.jpg') no-repeat 50% 32% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-avatar-north-and-south .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-bumi-vs-toph {
+	background: var(--gray-light) url('../img/comics-covers/avatar/bumi-vs-toph/bumi-vs-toph.jpg') no-repeat 50% 25% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-bumi-vs-toph .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-el-rechazo-de-mai {
+	background: var(--gray-light) url('../img/comics-covers/avatar/el-rechazo-de-mai/el-rechazo-de-mai.jpg') no-repeat 50% 55% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-el-rechazo-de-mai .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-hermanas {
+	background: var(--gray-light) url('../img/comics-covers/avatar/hermanas/hermanas.jpg') no-repeat 50% 68% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-hermanas .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-historia-del-almirante-zhao {
+	background: var(--gray-light) url('../img/comics-covers/avatar/historia-del-almirante-zhao/historia-del-almirante-zhao.jpg') no-repeat 50% 68% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-historia-del-almirante-zhao .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-avatar-la-brecha {
+	background: var(--gray-light) url('../img/comics-covers/avatar/avatar-la-brecha/avatar-la-brecha-001.jpg') no-repeat 50% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-avatar-la-brecha .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-las-aventuras-perdidas {
+	background: var(--gray-light) url('../img/comics-covers/avatar/las-aventuras-perdidas/las-aventuras-perdidas.jpg') no-repeat 50% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-las-aventuras-perdidas .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-conchas {
+	background: var(--gray-light) url('../img/comics-covers/avatar/conchas/avatar-conchas.jpg') no-repeat 50% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-conchas .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-gi-joe-origins {
+	background: var(--gray-light) url('../img/comics-covers/gi-joe-origins/001.jpg') no-repeat 50% 50% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-gi-joe-origins .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-gi-joe-reborn-and-reloaded {
+	background: var(--gray-light) url('../img/comics-covers/gi-joe-reborn-and-reloaded/002.jpg') no-repeat 50% 18% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-gi-joe-reborn-and-reloaded .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-gi-joe-snake-eyes {
+	background: var(--gray-light) url('../img/comics-covers/gi-joe-snake-eyes/002.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-gi-joe-snake-eyes .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-gi-joe-vol-1 {
+	background: var(--gray-light) url('../img/comics-covers/gi-joe-vol-1/003.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-gi-joe-vol-1 .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-green-hornet-año-uno {
+	background: var(--gray-light) url('../img/comics-covers/green-hornet-año-uno/001.jpg') no-repeat 50% 40% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-green-hornet-año-uno .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-the-secret-service {
+	background: var(--gray-light) url('../img/comics-covers/the-secret-service/001.jpg') no-repeat 50% 70% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-the-secret-service .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-preacher {
+	background: var(--gray-light) url('../img/comics-covers/preacher/001.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-preacher .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-all-bad-things {
+	background: var(--gray-light) url('../img/comics-covers/all-bad-things/000.jpg') no-repeat 50% 3% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-all-bad-things .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-supernatural-origins {
+	background: var(--gray-light) url('../img/comics-covers/supernatural-origins/001.jpg') no-repeat 50% 30% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-supernatural-origins .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-supernatural-rising-son {
+	background: var(--gray-light) url('../img/comics-covers/rising-son/001.jpg') no-repeat 50% 25% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-supernatural-rising-son .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+.banner-beginnings-end {
+	background: var(--gray-light) url('../img/comics-covers/beginnings-end/001.jpg') no-repeat 50% 25% / cover;
+	width: 100vw;
+	height: 90vh;
+}
+
+.banner-beginnings-end .layer {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.25);
+}
+
+
+
+footer {
+	background: var(--dark);
+	color: var(--gray-light);
+	padding: 1rem 0;
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+}
+
+footer p {
+	margin: 0;
+	font: 300 .75rem Calibri;
+}
+
+@media (max-width: 1200px) {
+	.captures img {
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.captures img {
+		margin-bottom: 1.5rem;
+	}
+
+	.captures .images {
+		text-align: center;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.main-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+	.main-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.main-grid .card .card-image {
+		height: 500px;
+	}
+}
+
+@media (max-width: 576px) {
+	.main-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
